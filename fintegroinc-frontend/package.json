@@ -27,6 +27,7 @@
     "jquery.easing": "^1.4.1",
     "modernizr-webpack-plugin": "^1.0.5",
     "rowgrid.js": "^1.0.5",
+    "social": "^0.4.0",
     "tether": "^1.4.0"
   },
   "devDependencies": {
