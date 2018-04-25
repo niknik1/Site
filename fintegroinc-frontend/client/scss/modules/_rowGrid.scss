@@ -1,0 +1,32 @@
+[data-grid='images']:after,
+[data-grid='images']:before {
+  content: "";
+  display: table;
+}
+
+[data-grid='images']:after {
+  clear: both;
+}
+
+.rowGrid-item {
+  float: left;
+  margin-bottom: 10px;
+}
+
+.rowGrid-item img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: bottom;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.first-item {
+  clear: both;
+}
+
+/* remove margin bottom on last row */
+.last-row,
+.last-row ~ .rowGrid-item {
+  margin-bottom: 0;
+}

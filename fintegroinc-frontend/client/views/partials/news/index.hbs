@@ -1,0 +1,21 @@
+{{#if this.news}}
+  <div class="wall-item preloader-item">
+    <img src="./client/media/bg/ajax_preloader.gif" alt="preloader">
+  </div>
+  <ul class="ca bqe bqf agk wall-list is-loading">
+    {{#each this.news}}
+
+      {{#if relation}}
+        {{> followNews}}
+      {{else}}
+        {{> postNews}}
+      {{/if}}
+
+    {{/each}}
+
+  {{else}}
+
+    {{> ../error/news/empty}}
+
+  {{/if}}
+  </ul>

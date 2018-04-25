@@ -1,0 +1,13 @@
+{{#if this.albums}}
+
+	{{#each this.albums}}
+		<div class="rowGrid-item">
+			<img data-width="640" data-height="640" data-action="zoom" src="{{#if photos}}{{#photos}}{{#if @last}}{{url}}{{/if}}{{/photos}}{{else}}/client/media/bg/no-image.png{{/if}}" width="114px" height="115px" />
+		</div>
+	{{/each}}
+
+{{else}}
+
+	{{> ../error/albums/empty}}
+
+{{/if}}

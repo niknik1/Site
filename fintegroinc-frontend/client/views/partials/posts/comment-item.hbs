@@ -1,0 +1,22 @@
+<li class="tu agd comments-item">
+  <img class="bqa wp yy agc" src="
+  {{#if user.photo}}
+    {{user.photo}}
+  {{else}}
+    ./client/media/bg/no-image-user.jpg
+  {{/if}}
+  " />
+  <div class="tv">
+    <a href="#" class="js-page" data-page="home" data-id="{{user_id}}">
+      <strong>
+        {{#if user.firstname}}
+          {{user.firstname}} {{user.lastname}}:
+        {{else}}
+          Anonymous:
+        {{/if}}
+      </strong> 
+    </a>
+    {{#if text}} {{text}} {{else}} This function is not complete. Reload page for look at the comment {{/if}}
+    </div>
+    <span class="remove-comments" data-type="comments" data-commentId="{{id}}">&times;</span>
+</li>

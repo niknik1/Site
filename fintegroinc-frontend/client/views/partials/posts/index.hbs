@@ -1,0 +1,23 @@
+<div class="tu b ahx wall-item">
+  <div class="input-group">
+    <input type="text" class="form-control js-wall-msg" placeholder="Message">
+    <span class="input-group-btn">
+      <button class="btn btn-secondary js-get-media-dialog" data-type="wall" type="button"><i class="fa fa-camera no-padding" aria-hidden="true"></i></button>
+    </span>
+    <span class="input-group-btn">
+      <button class="btn btn-secondary js-send-msg" type="button"><i class="fa fa-comment no-padding" aria-hidden="true"></i></button>
+    </span>	
+  </div>
+
+  <div class="wall__post-media">
+    <ul></ul>
+  </div>
+
+  <div class="wall-item preloader-item">
+    <img src="./client/media/bg/ajax_preloader.gif" alt="preloader">
+  </div>
+</div>
+<ul class="ca bqe bqf agk wall-list is-loading">
+  {{> simple-item}}
+</ul>
+

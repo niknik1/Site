@@ -1,0 +1,56 @@
+<div class="card card-container">
+  <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+  <p id="profile-name" class="profile-name-card"></p>
+
+  <form class="form-signin" data-type="login" data-role="validator">
+    <div class="form-group input-control user-login-f">
+      <input type="text" 
+             class="form-control user-login" 
+             data-validate="login" 
+             placeholder="Login" 
+             data-validate-func="required"
+             data-validate-hint="This field can not be empty!"
+             data-validate-hint-position="right"
+             required>
+      <!-- <div class="form-control-feedback">Sorry, that username's taken. Try another?</div> -->
+    </div>
+
+    <div class="form-group input-control user-email-f">
+      <input type="email" 
+             class="form-control user-email" 
+             placeholder="Email" 
+             required>
+      <!-- <div class="form-control-feedback">Sorry, that email's taken. Try another?</div> -->
+    </div>
+
+    <div class="form-group input-control user-password-f">
+      <input type="password"
+             class="form-control user-password" 
+             data-validate="password" 
+             placeholder="Password" 
+             data-validate-func="required"
+             data-validate-hint="This field can not be empty!"
+             data-validate-hint-position="right"
+             required>
+      <!-- <div class="form-control-feedback">Sorry, that username's taken. Try another?</div> -->
+    </div>
+
+    <br>
+
+    <button class="btn btn-lg btn-success btn-block btn-signin js-login" type="submit">Sign In</button>
+  </form>
+
+  <br>
+  <a href="#" class="forgot-password">Forgot the password?</a>
+
+  <a href="#" class="js-linkBtn js-get-register">А тута можно зарегаться</a>
+
+</div>
+
+<div class="alerts-block"></div>
+
+<style>
+.app-navbar {
+  display: none;
+}
+</style>

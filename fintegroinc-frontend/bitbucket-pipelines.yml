@@ -1,0 +1,17 @@
+# This is a sample build configuration for PHP.
+# Check our guides at https://confluence.atlassian.com/x/VYk8Lw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: samueldebruyn/debian-git
+
+pipelines:
+  default:
+    - step:
+        script: # Modify the commands below to build your repository.
+          - apt-get update
+          - apt-get -qq install ssh
+          - (umask 077; echo $FINTEGRO | base64 --decode  -i > ~/fintegro.pem)
+          - cat ~/fintegro.pem
+          - ssh -oStrictHostKeyChecking=no -i ~/fintegro.pem ubuntu@fintegro.ca 'cd /srv/www/getrestapi.fintegro.com; git stash save --keep-index; git stash drop; git pull'
+

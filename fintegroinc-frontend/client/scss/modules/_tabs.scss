@@ -1,0 +1,17 @@
+.nav {
+  &-item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 480px), (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait){
+  .bqd .nav-link{
+    font-size: 12px;
+  }
+
+  .bpy.is-collapse{
+    height: 80px !important;
+  }
+}

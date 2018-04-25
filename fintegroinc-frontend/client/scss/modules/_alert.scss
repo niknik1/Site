@@ -1,0 +1,15 @@
+.alerts-block {
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
+  z-index: 9999;
+  width: 300px;
+
+  .alert{
+    width: 100%;
+  }
+
+  .close{
+    width: auto;
+  }
+}

@@ -1,0 +1,17 @@
+<div class="wall-item preloader-item">
+  <img src="./client/media/bg/ajax_preloader.gif" alt="preloader">
+</div>
+<ul class="ca bqe bqf agk wall-list is-loading">
+
+{{#if this.chats}}
+
+    {{#each this.chats}}
+      {{> chatGroup}}
+    {{/each}}
+
+  {{else}}
+
+    {{> ../error/chat/empty}}
+
+  {{/if}}
+</ul>

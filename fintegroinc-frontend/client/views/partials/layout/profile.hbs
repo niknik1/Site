@@ -1,0 +1,66 @@
+<div class="bpy" style="background-image: url(/client/media/instagram/iceland.jpg);">
+  <div class="by">
+    <div class="bpz">
+      <img class="wg bqa profile-photo" src="{{#if profile.photo}}{{profile.photo}}{{else}}/client/media/bg/no-image-user.jpg{{/if}}">
+      <h3 class="bqc profile-name">
+        {{#if profile.firstname}}
+        {{profile.firstname}} {{profile.lastname}}
+        {{else}}
+        Firstname Lastname
+        {{/if}}
+
+      </h3>
+      <p class="bqb profile-quote">
+      {{profile.quote}}
+      </p>
+    </div>
+  </div>
+
+  <nav class="bqd">
+    <ul class="nav nav-tabs qw yj" role="tablist">
+      <li class="qx nav-item nav-item__profile">
+        <a class="qv nav-link" data-toggle="tab" href="#profile" role="tab">Profile</a>
+      </li>
+      <li class="qx nav-item nav-item__albums">
+        <a class="qv nav-link active" data-toggle="tab" href="#albums" role="tab">Albums</a>
+      </li>
+      <li class="qx nav-item nav-item__new-album">
+        <a class="qv nav-link" data-toggle="modal" href="#newAlbum">Create Album</a>
+      </li>
+      <li class="qx nav-item nav-item__photos">
+        <a href="#" class="qv nav-link">Album photo</a>
+      </li>
+      <li class="qx nav-item nav-item__new-photo">
+        <a class="qv nav-link" data-toggle="modal" href="#newPhoto">Upload Photo</a>
+      </li>
+      <li class="qx nav-item nav-item__remove-album">
+        <a class="qv nav-link" href="#">Remove Album</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="by agn tab-content">
+
+  <div class="profile-settings tab-pane" role="tabpanel" id="profile">
+    {{> ../profile/profileForm.hbs}}
+  </div>
+
+  <div class="albums tab-pane active" role="tabpanel" id="albums">
+    {{> ../albums/index.hbs}} 
+  </div>
+</div>
+
+<form class="is-hidden" id="js-media-album-form">
+  <input type="file" name="UploadForm[imageFile]" class="js-media-album-file">
+</form>
+
+
+{{> ../modals/msg.hbs}}
+{{> ../modals/album.hbs}}
+
+<div class="alerts-block"></div>
+
+<footer>
+  <p>&copy; 2017 Fintegro Company. All rights reserved.</p>
+</footer>

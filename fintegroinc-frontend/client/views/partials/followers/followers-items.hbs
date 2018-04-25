@@ -1,0 +1,47 @@
+<div class="rq">
+  <h6 class="agd">Friends {{#if this.friends}}<small>· <a href="#">View All</a></small> {{/if}}</h6>
+
+  <div class="preloader-item">
+    <img src="./client/media/bg/ajax_preloader.gif" alt="preloader" />
+  </div>
+
+  <ul class="bqe bqf followers-list">
+    {{#if this.friends}}
+
+    {{#each this.friends}}
+    <li class="tu afw user-item followers-list__item" data-userid="{{user_id}}">
+      <img class="bqa wp yy agc" src="{{#if photo}}{{photo}}{{else}}/client/media/bg/no-image-user.jpg{{/if}}">
+      <div class="tv">
+        <a href="#" class="js-page js-page-alien" data-page="home" data-id="{{user_id}}">
+          <strong>
+            {{#if firstname}}
+            {{firstname}} {{lastname}}
+            {{else}}
+            User without name
+            {{/if}}
+          </strong>
+        </a>
+        <div class="bqi">
+          <button class="cg pq pz js-unfollow-update">
+            <!-- <span class="h azp"></span>  -->
+            <i class="fa fa-user-times width-20 no-padding" aria-hidden="true"></i>
+            Unfollow</button>
+          <button class="cg pq pz js-block-update">
+            <!-- <span class="h azp"></span>  -->
+            <i class="fa fa-user-secret width-20 no-padding" aria-hidden="true"></i>
+            Block</button>
+        </div>
+      </div>
+    </li>
+    {{/each}}
+
+    {{else}}
+
+    {{> ../error/friends/emptyIndex}}
+
+    {{/if}}
+  </ul>
+</div>
+<div class="rw">
+  Some random quote
+</div>

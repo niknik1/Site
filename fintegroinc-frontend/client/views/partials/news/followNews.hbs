@@ -1,0 +1,25 @@
+<li class="b tu ahx wall-item news-item">
+  <i class="fa fa-bullhorn no-padding width-20" aria-hidden="true"></i>
+
+  <div class="tv">
+    <small class="aec axr">{{date}}</small>
+    <div class="bqj">
+      You followed <a href="#" class="js-page" data-page="home" data-id="{{user_id}}"><strong>{{#if relation.firstname}}{{relation.firstname}} {{relation.lastname}}{{else}}Anonymous{{/if}}</strong></a>
+      </div>
+
+      <div class="afu">
+        <div class="dq">
+          <div class="fk">
+            <div class="rp bqq">
+              <div class="rv" style="background-image: url(./client/media/instagram/instagram_1.jpg);"></div>
+              <div class="rq awx">
+                <img class="bqr" src="{{#if relation.photo}}{{relation.photo}}{{else}}/client/media/bg/no-image-user.jpg{{/if}}">
+                  <h5 class="rr">{{#if relation.firstname}}{{relation.firstname}} {{relation.lastname}}{{else}}Anonymous{{/if}}</h5>
+                  <p class="agk">{{quote}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</li>

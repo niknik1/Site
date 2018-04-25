@@ -1,0 +1,41 @@
+html {
+  font-size: 14px;
+
+  *,
+  *:visited,
+  *:focus {
+    outline: none;
+  }
+}
+
+body {
+  letter-spacing: 0;
+  font-weight: 300 !important;
+  transition: opacity .5s ease;
+  padding-top: 50px;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+
+  footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    height: 50px;
+    text-align: center;
+    color: #000;
+    line-height: 50px;
+    z-index: 99;
+
+    p{
+      margin-bottom: 0;
+    }
+  }
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+}

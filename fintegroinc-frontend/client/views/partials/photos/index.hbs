@@ -1,0 +1,23 @@
+{{#if this.album}}
+  {{#each this.album}}
+    {{#if photos}}
+
+    <ul class="album" data-grid="images" data-target-height="200" data-albumid="{{id}}">
+        {{#photos}}
+          <li class="rowGrid-item photo-item" data-photoid="{{id}}">
+            <img data-width="640" data-height="640" data-action="zoom" src="{{url}}">
+          </li>
+        {{/photos}}
+      </ul>
+    {{else}}
+
+      {{> ../error/photos/empty}}
+
+    {{/if}}
+  {{/each}}
+{{else}}
+
+  {{> ../error/photos/empty}}
+
+{{/if}}
+

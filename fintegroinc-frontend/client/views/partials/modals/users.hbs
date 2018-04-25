@@ -1,0 +1,50 @@
+<div class="cd fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="bqy" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="d">
+        <h4 class="modal-title">Friends</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+
+      <div class="modal-body agv">
+        <div class="azd">
+          <ul class="bqe cj ca">
+            {{#if this.friends}}
+              {{#friends}}
+                <li class="b user-item" data-userid="{{user_id}}">
+                  <div class="tu aey">
+                    <img class="bqa wp yy agc" src="{{#if photo}}{{photo}}{{else}}/client/media/bg/no-image-user.jpg{{/if}}">
+                      <div class="tv">
+                        <button class="js-block js-modal-btn cg pl pz aec">
+                          <i class="fa fa-user-secret width-20 no-padding" aria-hidden="true"></i>
+                          Block</button>
+                        <button class="js-unfollow js-modal-btn cg pl pz aec" style="margin-right: 5px;">
+                          <i class="fa fa-user-times width-20 no-padding" aria-hidden="true"></i>
+                          Unfollow</button>
+                        <button class="js-start-chat js-page cg pl pz aec" data-page="chat" style="margin-right: 5px;">
+                          <i class="fa fa-envelope-open-o width-20 no-padding" aria-hidden="true"></i>
+                          Start chat</button>
+                        <strong>
+                          {{#if firstname}}
+                            {{firstname}} {{lastname}}
+                          {{else}}
+                            Anonymous
+                          {{/if}}
+                        </strong>
+                      </div>
+                  </div>
+                </li>
+              {{/friends}}
+            {{else}}
+              <li class="b">
+                <div class="tv">
+                  <p style="margin-top: 1rem;text-align: center;">You don't have friends yet</p>
+                </div>
+              </li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

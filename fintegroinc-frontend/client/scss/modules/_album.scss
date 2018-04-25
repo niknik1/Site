@@ -1,0 +1,83 @@
+.albums {
+  text-align: center;
+
+  .photo-item,
+  .album-item{
+    border: 1px solid #999;
+    cursor: pointer;
+  }
+
+  .album-item{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    &:after{
+      content: 'Open';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 4rem;
+      margin: auto;
+      display: none;
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: none;
+    }
+
+    &:hover{
+      &:after, &:before{
+        display: block;
+      }
+    }
+  }
+
+  @at-root .bpy {
+    transition: all .5s ease;
+  }
+
+  @at-root .bpy.is-collapse{
+    height: 60px;
+    padding-bottom: 1rem;
+
+    & > .by{
+      position: absolute;
+      top: -1000px;
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    .album-item {
+      width: calc(25% - 5px);
+      height: 200px;
+    }
+  }
+
+  @media screen and (max-width: 767px){
+    .album-item {
+      width: calc(50% - 5px);
+      height: 150px;
+    }
+  }
+
+}
+
+.nav-item__remove-album,
+.nav-item__photos,
+.nav-item__new-photo {
+  display: none;
+}
+

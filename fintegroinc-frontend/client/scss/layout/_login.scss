@@ -1,0 +1,137 @@
+.l-index {
+  //opacity: 0;
+
+  .card-container.card {
+    width: 350px;
+    padding: 40px 40px 20px;
+  }
+
+  .btn {
+    //font-weight: 700;
+    height: 36px;
+    cursor: pointer;
+  }
+
+  .card {
+    background-color: #F7F7F7;
+    //padding: 20px 25px 30px;
+    margin: 50px auto 25px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+
+  .profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+  }
+
+  .reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+
+  input[type=email],
+  input[type=password],
+  input[type=text] {
+    height: 44px;
+  }
+
+  button,
+  input[type=email],
+  input[type=password],
+  input[type=text] {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .user-email-f{
+    display: none;
+  }
+
+  .form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);
+  }
+
+  .btn.btn-signin {
+    padding: 0;
+    //font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    border-radius: 3px;
+    border: none;
+    transition: all 0.218s;
+  }
+
+  a {
+    color: rgb(104, 145, 162);
+
+    &:active,
+    &:focus,
+    &:hover{
+      color: rgb(12, 97, 33);
+    }
+  }
+}
+
+.hint {
+  position: absolute;
+  top: -20px;
+  background: #fff;
+  padding: .25em .5em;
+  min-width: 30px;
+  text-align: center;
+
+  &.validator-hint{
+    background: red;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 480px), (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+  body{
+    padding: 0 !important;
+  }
+
+  .l-index .card-container.card{
+    width: 100vw;
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 992px) and (orientation: landscape){
+  body{
+    padding: 0;
+  }
+
+  .l-index .card{
+    margin: 0 auto;
+  }
+}

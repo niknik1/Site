@@ -1,0 +1,97 @@
+<!--<aside class="fh user" data-profileId="{{profile.user_id}}">-->
+  <div class="rp bqq agk user__info block">
+    <div class="rv" style="background-image: url(./client/media/instagram/iceland.jpg);"></div>
+    <div class="rq awx">
+      <a href="#" class="js-page" data-page="home">
+        <img class="bqr" data-page="profile" src="{{#if profile.photo}}{{profile.photo}}{{else}}/client/media/bg/no-image-user.jpg{{/if}}">
+      </a>
+
+      <h6 class="rr">
+        <a class="bph user-name" href="profile.html">
+          {{#if profile.firstname}}
+          {{profile.firstname}} {{profile.lastname}}
+          {{else}}
+          Anonymous
+          {{/if}}
+        </a>
+      </h6>
+
+      <p class="agk user-description">{{profile.quote}}</p>
+
+      <ul class="bqs">
+        <li class="bqt">
+          <a href="#userModal" class="bph user-friends" data-toggle="modal">Friends
+            <h6 class="afl">
+              {{#if friends_count}}
+              {{friends_count}}
+              {{else}}
+              0
+              {{/if}}
+            </h6>
+          </a>
+        </li>
+
+        <li class="bqt">
+          <a href="#userModal" class="bph" data-toggle="modal">Enemies
+            <h6 class="afl">
+              {{#if enemies_count}}
+              {{enemies_count}}
+              {{else}}
+              0
+              {{/if}}
+            </h6>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="rp bra brb agk user__info-list block">
+    <div class="rq">
+      <h6 class="agd">About <small>· <a href="#" class="js-page" data-page="profile">Edit</a></small></h6>
+      <ul class="dc ayn">
+        <li>
+          <i class="fa fa-calendar-o axr agc no-padding" aria-hidden="true"></i>
+          Went to <a href="#" class="user-went">
+            {{#if profile.went}}
+            {{profile.went}}
+            {{else}}
+            no set
+            {{/if}}
+          </a>
+        </li>
+        <li>
+          <i class="fa fa-home axr agc no-padding" aria-hidden="true"></i>
+          Lives in <a href="#" class="user-addr">
+            {{#if profile.lived}}
+            {{profile.lived}}
+            {{else}}
+            no set
+            {{/if}}
+          </a>
+        </li>
+        <li>
+          <i class="fa fa-map-marker axr agc no-padding" style="width: 13px" aria-hidden="true"></i>
+          From <a href="#" class="user-from">
+            {{#if profile.from}}
+            {{profile.from}}
+            {{else}}
+            no set
+            {{/if}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="rp bra brb user__info-photos block">
+    <div class="rq">
+      <h6 class="agd">Albums <small>· <a href="#" class="js-page" data-page="profile">Show more</a></small></h6>
+      <div class="preloader-item">
+        <img src="./client/media/bg/ajax_preloader.gif" alt="preloader">
+      </div>
+      <div data-grid="images" data-target-height="150" class=""></div>
+    </div>
+  </div>
+  <!--</aside>-->
+  {{> ../modals/users}}

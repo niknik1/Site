@@ -1,0 +1,56 @@
+<li class="b tu ahx wall-item">
+  <i class="fa fa-bullhorn no-padding width-20" aria-hidden="true"></i>
+
+  <div class="tv">
+    <small class="aec axr">Some help text</small>
+    <div class="bqj">
+      Search result
+    </div>
+
+    <div class="afu">
+      <div class="dq">
+        {{#if this.profiles}}
+          {{#each this.profiles}}
+            <div class="fk user-item" data-userid="{{user_id}}">
+              <div class="rp bqq">
+                <div class="rv" style="background-image: url(./client/media/instagram/instagram_4.jpg);"></div>
+                <div class="rq awx">
+                  <img class="bqr" src="{{#if photo}}{{photo}}{{else}}/client/media/bg/no-image-user.jpg{{/if}}">
+                    <h5 class="rr">
+                      {{#if firstname}}
+                        {{firstname}} {{lastname}}
+                      {{else}}
+                        User without name
+                      {{/if}}
+                    </h5>
+                    <p class="agk">{{quote}}</p>
+                    {{#unless friend}}
+                      <button class="cg pq pz js-follow" style="margin-bottom: 5px">
+                        <i class="fa fa-user-plus width-20 no-padding" aria-hidden="true"></i>
+                        Follow
+                      </button>
+                    {{/unless}}
+                    <button class="cg pq pz js-unfollow" style="margin-bottom: 5px">
+                      <i class="fa fa-user-times width-20 no-padding" aria-hidden="true"></i>
+                      Unfollow
+                    </button>
+                    {{#if friend}}
+                      <button class="cg pq pz js-block" style="margin-bottom: 5px">
+                        <i class="fa fa-user-secret width-20 no-padding" aria-hidden="true"></i>
+                        Block
+                      </button>
+                    {{/if}}
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        {{else}}
+
+          <p style="margin-top: 1rem;text-align: center;">Nothing found on your request</p>
+
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</li>
+
